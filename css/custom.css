@@ -1,0 +1,155 @@
+/* 
+/
+/  Custom overrides
+/
+-------------------------------------------------- */
+
+/* Layout and typography
+-------------------------------------------------- */
+
+body {
+  font-family: 'PT Sans';        
+}
+
+a {
+  color: #e67747;
+}
+
+a:hover {
+  color: #7d3c75;
+}
+
+h1, h2, h3 {
+  font-family: 'Enriqueta';        
+}
+
+h2.panel-title {
+  font-size: 30px;
+}
+
+.btn h2.pull-left {
+  padding-left: 30px;
+}
+
+.jumbotron {
+  padding-left: 0;
+}
+
+code {
+  color: #B85F38;
+  background-color: #FCF1EC;
+}
+
+strong {
+  color: #e67747;
+  font-weight: bold;
+}
+
+.vertical-spacer {
+  height: 30px;
+}
+
+/* Misc elements
+-------------------------------------------------- */
+
+.well {
+  background-color: white;
+  margin-bottom: 0;
+}
+
+#buttons-row {
+  padding-bottom: 34px;
+}
+
+.gold-star {
+  color: #fcd67e;
+  border: 2px solid #fcd67e;
+  border-radius: 7px;
+  margin-bottom: -2px;
+  padding: 0.25em;
+}
+
+.gold-star:hover {
+  color: #e67747;
+  border-color: #e67747;
+}
+
+.gold-star:hover:after {
+  content: " yay! you rock :)";
+}
+
+.gold-star-snarky:hover:after {
+  content: " yay! I rock ;)";
+}
+
+.panel-heading:hover a {
+  color:inherit;
+}
+
+.modal-dialog {
+  width: 720px;
+}
+
+.giant-and-green {
+  color: #b2b84a;
+  font-size: 3000%;
+}
+
+/* Color blocks
+-------------------------------------------------- */
+
+.bg-yellow {
+  background: #fcd67e !important;
+  color: white !important;
+  border-color: #fcd67e !important;
+}
+
+.bg-orange {
+  background: #e67747 !important;
+  color: white !important;
+  border-color: #e67747 !important;
+}
+
+.bg-purple {
+  background: #7d3c75 !important;
+  color: white !important;
+  border-color: #7d3c75 !important;
+}
+
+.bg-lavendar {
+  background: #826c9c !important;
+  color: white !important;
+  border-color: #826c9c !important;
+}
+
+.bg-green {
+  background: #b2b84a !important;
+  color: white !important;
+  border-color: #b2b84a !important;
+}
+
+.bg-neutral, a.btn:hover, .panel-heading:hover  {
+  background: #bdbdb9 !important;
+  border-color: #bdbdb9 !important;
+  color: white !important;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  padding-top: 20px;
+}      
+
