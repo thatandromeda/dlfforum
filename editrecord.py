@@ -41,6 +41,14 @@ for marc in records:
             'a', 'Donated by the DLF Pythonistas'
         ]))
 
+    marc.add_field(
+    Field(
+        tag = '590',
+        indicators = [' ',' '],
+        subfields = [
+            'a', 'Updated 25 October 2014'
+        ]))
+
     writer_dat.write(marc)
     writer_xml.write(record_to_xml(marc) + "\n")
 

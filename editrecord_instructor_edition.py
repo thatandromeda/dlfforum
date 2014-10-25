@@ -7,6 +7,10 @@ Modified from files at https://github.com/LibraryCodeYearIG/MARC-record-edit .
 # review syntax as we go.
 # Warn them it doesn't 100% work and we're going to debug it.
 # Make sure they add comments, IN COMPLETE SENTENCES, as they go.
+# Remember declarative and procedural knowledge. They're articulating
+# stuff now and doing more of it later. They'll be able to refer back to
+# declarations then.
+# Be explicit about iterative mental models.
 
 import os
 #import codecs
@@ -69,6 +73,16 @@ for marc in records:
             'a', 'Donated by the DLF Pythonistas'
         ]))
 
+    # These should be made into a function later. DRY!
+    # Also note the single vs double quotes options
+    marc.add_field(
+    Field(
+        tag = '590',
+        indicators = [' ',' '],
+        subfields = [
+            'a', "Library's copy lacks appendices, and also all other pages"
+        ]))
+
     writer_dat.write(marc)
     writer_xml.write(record_to_xml(marc) + "\n")
 
@@ -100,6 +114,7 @@ os.rename('file.xml', '%s.xml' % record_date)
 
 # Ask people what are some modifications they might want to make. Write them
 # down against future need.
+# Make sure that we're consulting the XML output in so doing.
 
 # Google how to write a good bug report. Pick something reputable, like Mozilla
 # or MediaWiki.

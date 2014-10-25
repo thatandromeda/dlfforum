@@ -1,4 +1,6 @@
-editrecord_instructor_edition.py
+*_instructor_edition.*
+*.dat
+*.xml
 
 # Created by https://www.gitignore.io
 
