@@ -134,6 +134,36 @@ strong {
   color: white !important;
 }
 
+.bg-white {
+  background-color: white;
+}
+
+/* Color text
+-------------------------------------------------- */
+.text-yellow {
+  color: #fcd67e;
+}
+
+.text-orange {
+  color: #e67747;
+}
+
+.text-purple {
+  color: #7d3c75;
+}
+
+.text-lavendar {
+  color: #826c9c;
+}
+
+.text-green {
+  color: #b2b84a;
+}
+
+.text-neutral {
+  color: #bdbdb9;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {

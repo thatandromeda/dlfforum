@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Listening-Based Python at DLF Forum 2014</title>
 
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css" type="text/css">
 
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans|Enriqueta:700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=PT+Sans|Enriqueta:700' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -100,6 +100,51 @@
       <!-- begin unit content row -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
+          <h3>Function basics</h3>
+
+          <ul>
+            <li>
+              What is a function?
+            </li>
+            <li>
+              How do you write a python function?
+            </li>
+<pre class="bg-white">
+<em class="text-purple">def</em> <span class="text-green">function_name</span>(<em class="text-orange">argument1</em>, <em class="text-orange">argument2</em>, ...):
+    <span class="text-neutral">"""
+    docstring explaining what the function does (optional but recommended)
+    """</span>
+    <span class="text-neutral"># function logic goes here</span>
+    return something  <span class="text-neutral"># optional</span>
+</pre>
+            <li>
+              An example
+            </li>
+<pre class="bg-white">
+<em class="text-purple">def</em> <span class="text-green">make_happier</span>(<em class="text-orange">base_word</em>):
+    return base_word + " :)"
+</pre>
+            <li>
+              A more complicated example
+            </li>
+<pre class="bg-white">
+<em class="text-purple">def</em> <span class="text-green">get_isbn_13</span>(<em class="text-orange">isbn</em>):
+  <span class="text-neutral">"""
+  Given an ISBN, returns the 13-digit version of that ISBN.
+  Does not check to see if it's a valid ISBN except by confirming length;
+  returns None if length is invalid. It's the caller's responsibility to
+  confirm validity if needed.
+  """</span>
+  if len(isbn) == 13:
+    return isbn
+  elif len(isbn) == 10:
+    return "978" + isbn
+  else:
+    <span class="text-neutral"># Something is wrong; ISBNs should only be 10 or 13 digits.</span>
+    return None
+</pre>
+          </ul>
+
           <h3>Our first function</h3>
 
           <p>
@@ -108,9 +153,20 @@
 
           <h3>Function practice</h3>
 
-          <p>
-            define, exemplify, have people write sample functions 
-          </p>
+          <h4>If you need practice or review with Python function fundamentals...</h4>
+          <ul>
+            <li>
+              <a href="http://codingbat.com/home/bostonpythonworkshop@gmail.com/Friday">CodingBat part 1</a>
+            </li>
+            <li>
+              <a href="http://codingbat.com/home/bostonpythonworkshop@gmail.com/SaturdayMorning">CodingBat part 2</a>
+            </li>
+            <li>
+              <a href="http://codingbat.com/home/bostonpythonworkshop@gmail.com/Saturday">CodingBat part 3</a>
+            </li>
+          </ul>
+
+          <h4>If you'd like to practice with more real-world examples...</h4>
 
           <p>
             make sure they're testable in some way, and don't rely on
@@ -166,8 +222,8 @@
     <!-- end footer -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   </body>
 </html>
