@@ -18,7 +18,7 @@ writer_xml.write('<collection>')
 
 
 for marc in records:
-
+    
     other_identifier_list = marc.get_fields('024')
     other_identifier_field = other_identifier_list[0]
     other_identifier = other_identifier_field.get_subfields('a')
@@ -46,7 +46,7 @@ for marc in records:
         tag = '590',
         indicators = [' ',' '],
         subfields = [
-            'a', 'Updated 25 October 2014'
+            'a', "Library's copy lacks appendices, and also all other pages"
         ]))
 
     writer_dat.write(marc)
