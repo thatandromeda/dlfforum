@@ -40,8 +40,8 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           
-          <a href="https://github.com/thatandromeda/dlfforum/blob/master/editrecord.py" class="btn btn-lg btn-block btn-primary bg-lavendar clearfix">
-            <h2 class="pull-left">Unit 3: Expanding the Code's Scope &amp; Power</h2>
+          <a href="https://github.com/thatandromeda/dlfforum/blob/master/editrecord.py" class="btn btn-lg btn-block btn-primary bg-green clearfix">
+            <h2 class="pull-left">Unit 3: The Power of Functions</h2>
           </a>
 
           <div class="vertical-spacer"></div>
@@ -58,10 +58,10 @@
                 <div class="panel-body">
                   <ul class="list-unstyled">
                     <li>
-                      What loops are and why we care
+                      What functions are and why we care
                     </li>
                     <li>
-                      Loop syntax
+                      Function syntax
                     </li>
                   </ul>
                 </div>
@@ -78,7 +78,10 @@
                 <div class="panel-body">
                   <ul class="list-unstyled">
                     <li>
-                      How data quality issues impact scripting
+                      What DRY means and why we care
+                    </li>
+                    <li>
+                      Modifying code for fun and (non)profit
                     </li>
                   </ul>
                 </div>
@@ -97,34 +100,121 @@
       <!-- begin unit content row -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
+          <h3>Function basics</h3>
+
+          <ul>
+            <li>
+              What is a function?
+            </li>
+            <li>
+              How do you write a python function?
+            </li>
+<pre class="bg-white">
+<em class="text-purple">def</em> <span class="text-green">function_name</span>(<em class="text-orange">argument1</em>, <em class="text-orange">argument2</em>, ...):
+    <span class="text-neutral">"""
+    docstring explaining what the function does (optional but recommended)
+    """</span>
+    <span class="text-neutral"># function logic goes here</span>
+    return something  <span class="text-neutral"># optional</span>
+</pre>
+            <li>
+              An example
+            </li>
+<pre class="bg-white">
+<em class="text-purple">def</em> <span class="text-green">make_happier</span>(<em class="text-orange">base_word</em>):
+    return base_word + " :)"
+</pre>
+            <li>
+              A more complicated example
+            </li>
+<pre class="bg-white">
+<em class="text-purple">def</em> <span class="text-green">get_isbn_13</span>(<em class="text-orange">isbn</em>):
+  <span class="text-neutral">"""
+  Given an ISBN, returns the 13-digit version of that ISBN.
+  Does not check to see if it's a valid ISBN except by confirming length;
+  returns None if length is invalid. It's the caller's responsibility to
+  confirm validity if needed.
+  """</span>
+  if len(isbn) == 13:
+    return isbn
+  elif len(isbn) == 10:
+    return "978" + isbn
+  else:
+    <span class="text-neutral"># Something is wrong; ISBNs should only be 10 or 13 digits.</span>
+    return None
+</pre>
+          </ul>
+
+          <h3>Our first function</h3>
+
           <p>
-            re-examine loops we've seen before. also need to talk about
-            iterators more broadly. syntax; naming. diagram it or something.
-            have them state how you run through the code.
+            Let's work together to DRY out our handling of the 590 field. 
+          </p>
+
+          <h3>Function practice</h3>
+
+          <p>
+            There are more practice functions here than anyone is likely to finish. That's intentional! I want to be sure that no one runs out of things to do, and that there are options at varying levels of difficulty since our prior experience with programming varies. Please start wherever makes sense for you, and continue at whatever pace is productive for you.
+          </p>
+
+          <h4>If you need practice with Python function fundamentals...</h4>
+          <ul>
+            <li>
+              <a href="http://codingbat.com/home/bostonpythonworkshop@gmail.com/Friday">CodingBat part 1</a>
+            </li>
+            <li>
+              <a href="http://codingbat.com/home/bostonpythonworkshop@gmail.com/SaturdayMorning">CodingBat part 2</a>
+            </li>
+            <li>
+              <a href="http://codingbat.com/home/bostonpythonworkshop@gmail.com/Saturday">CodingBat part 3</a>
+            </li>
+          </ul>
+
+          <p>
+            If you find unfamiliar material in here, you can use <a href="https://thatandromeda.github.io/python-preconference/introduction.html">this
+            python tutorial</a> as a reference.
+          </p>
+
+          <h4>If you'd like to practice with more complex, real-world examples...</h4>
+
+          <p>
+            There are sample functions in the <a href="https://github.com/thatandromeda/dlfforum/tree/master/practice_functions">practice_functions</a> directory of our lesson. I've provided a skeleton for you; replace the comments with your own logic.
           </p>
 
           <p>
-            concepts of iteration, indexing; len()?
+            When you'd like to see if it works, make sure you're in the
+            <code>practice_functions</code> directory on your own machine and
+            simply run <code>python practice_1.py</code> (or whatever function 
+            you've been working on).
           </p>
 
           <p>
-            write some of our own loops
+            It's very important that you <em>test your work</em>. Look at the example MARC records in that directory (I've provided XML versions to make it easier) and see if you are getting the results you expect. I've written the practice functions so that they will run your code against several different example records, so that you can try out different edge cases.
+          </p>
+
+          <!--
+          <p>
+            what earlier syntax am I going to need? or do I make sure they know
+            about python string manipulation here? yeah, I think I do that.
           </p>
 
           <p>
-            feed it exampledump rather than examplerecord; encounter data
-            quality issue; do codecs update
+            make sure we have at least one example of breaking down a
+            complex function into parts. give them a complex spec and tell them
+            to plan FIRST.
           </p>
 
           <p>
-            spend some quality time with the xml full stop. does anything stand
-            out? are there irregularities or patterns we see now that we have an
-            entire record set? what are some issues they might have with their
-            own data sets?
+            and one of DRYing something out
           </p>
 
+          -->
+
+          <h3>Writing our own functions</h3>
+
           <p>
-            interaction of loops and conditionals: here's how we handle those
+            Let's go back to the feature requests we wrote in unit 1 and
+            make some features happen. Aw yeah.
           </p>
         </div>
       </div>
