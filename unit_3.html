@@ -195,6 +195,44 @@
             You may find it helpful to look at <a href="https://github.com/edsu/pymarc">the source code for pymarc</a>, particularly the <a href="https://github.com/edsu/pymarc/blob/master/pymarc/record.py">code for the Record object</a>, to see what options pymarc provides.
           </p>
 
+          <p>
+            You can also try out the examples <a href="https://github.com/edsu/pymarc/blob/master/pymarc/__init__.py">suggested by pymarc</a>. Using their sample file, can you get the same list of titles that they give in #1? Following their example in #2, can you write a more sophisticated record? If you can do that, how about a record adequate to your preferred minimum level of cataloging standards?
+          </p>
+
+          <h4>If you were writing your own functions during Unit 2...</h4>
+
+          <p>
+            Let's talk about how to debug them, improve style, and/or abstract them to cover a wider range of circumstances.
+          </p>
+
+          <p>
+            If you prefer to mentor your classmates or work through the real-world practice functions, those are also great options.
+          </p>
+
+          <p>
+             If you'd like to read <a href="https://github.com/edsu/pymarc">pymarc source</a>, that's a great option as well. Here are some questions to consider:
+          </p>
+
+          <ul>
+            <li>
+              The <a href="https://github.com/edsu/pymarc/blob/master/pymarc/record.py">Record object</a> is full of convenience functions like <code>title</code>, <code>isbn</code>, and <code>author</code>. What errors are they trying to defend against with their various <code>if</code> conditions? What types of objects do they return? When and how is this different from what you'd get performing similar queries with <code>get_fields</code> or similar?
+            </li>
+            <li>
+              <a href="https://github.com/edsu/pymarc/blob/master/pymarc/reader.py">Reader</a> has a <code>map_records</code> function. What does it do? Can you use it to make your earlier functions more elegant?
+            </li>
+            <li>
+              What's the benefit of having the code broken out into 8 separate files (plus <code>__init__</code>) instead of just pymarc.py?
+            </li>
+            <li>
+              Are the docstrings helpful to you? If so, what makes them good? If not, how could you improve them?
+            </li>
+            <li>
+              Why does <code>exceptions.py</code> exist? (If you're not familiar with exceptions, read the <a href="https://docs.python.org/2/tutorial/errors.html">python documentation</a>.)
+            </li>
+          </ul>
+
+
+
           <h3>Debrief</h3>
 
           <p>
